@@ -63,3 +63,8 @@ isEven x = divisibleBy x 2
 
 averageThree :: Int -> Int -> Int -> Float
 averageThree x y z = fromIntegral (x + y + z) / 3
+
+--10
+
+absolute :: Int -> Int
+absolute x = if x < 0 then - x else x
