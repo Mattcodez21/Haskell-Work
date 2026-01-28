@@ -43,3 +43,8 @@ volumeOfCylinder h r = areaOfCircle r * h
 
 distance :: Float -> Float -> Float -> Float -> Float
 distance x1 y1 x2 y2 = sqrt ((y1 - y2)^2 + (x1 - x2)^2) 
+
+--6
+
+threeDifferent :: Int -> Int -> Int -> Bool
+threeDifferent x y z = (x /= y) && (y /= z) && (x /= z)
