@@ -53,3 +53,8 @@ threeDifferent x y z = (x /= y) && (y /= z) && (x /= z)
 
 divisibleBy :: Int -> Int -> Bool
 divisibleBy x y = mod x y == 0
+
+--8
+
+isEven :: Int -> Bool
+isEven x = divisibleBy x 2
