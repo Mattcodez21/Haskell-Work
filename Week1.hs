@@ -48,3 +48,8 @@ distance x1 y1 x2 y2 = sqrt ((y1 - y2)^2 + (x1 - x2)^2)
 
 threeDifferent :: Int -> Int -> Int -> Bool
 threeDifferent x y z = (x /= y) && (y /= z) && (x /= z)
+
+--7
+
+divisibleBy :: Int -> Int -> Bool
+divisibleBy x y = mod x y == 0
