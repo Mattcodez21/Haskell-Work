@@ -37,4 +37,9 @@ areaOfCircle r = pi * r^2
 -- 4
 
 volumeOfCylinder :: Float -> Float -> Float
-volumeOfCylinder r h = areaOfCircle r * h
+volumeOfCylinder h r = areaOfCircle r * h
+
+--5
+
+distance :: Float -> Float -> Float -> Float -> Float
+distance x1 y1 x2 y2 = sqrt ((y1 - y2)^2 + (x1 - x2)^2) 
