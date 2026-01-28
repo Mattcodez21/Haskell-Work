@@ -58,3 +58,8 @@ divisibleBy x y = mod x y == 0
 
 isEven :: Int -> Bool
 isEven x = divisibleBy x 2
+
+--9
+
+averageThree :: Int -> Int -> Int -> Float
+averageThree x y z = fromIntegral (x + y + z) / 3
