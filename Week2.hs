@@ -64,3 +64,19 @@ taxiFare distance
   | otherwise      = basefare + 10 * 0.5 + fromIntegral (distance - 10) * 0.3
   where
     basefare = 2.20
+
+--6
+
+howManyAboveAverage :: Int -> Int -> Int -> Int
+howManyAboveAverage x y z
+  | x > avg && y > avg && z > avg = 3
+  | x > avg && y > avg            = 2
+  | x > avg && z > avg            = 2
+  | y > avg && z > avg            = 2
+  | x > avg                       = 1
+  | y > avg                       = 1
+  | z > avg                       = 1
+  | otherwise                     = 0
+  where
+    avg = (x + y + z) `div` 3
+
