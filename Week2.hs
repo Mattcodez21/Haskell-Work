@@ -55,3 +55,12 @@ sumDiagonalLengths :: Float -> Float -> Float -> Float
 sumDiagonalLengths s1 s2 s3 = diagonal s1 + diagonal s2 + diagonal s3
   where
     diagonal s = sqrt (2 * s ^ 2)
+
+--5
+
+taxiFare :: Int -> Float
+taxiFare distance
+  | distance <= 10 = basefare + fromIntegral distance * 0.5
+  | otherwise      = basefare + 10 * 0.5 + fromIntegral (distance - 10) * 0.3
+  where
+    basefare = 2.20
