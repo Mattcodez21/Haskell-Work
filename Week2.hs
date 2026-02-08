@@ -80,3 +80,12 @@ howManyAboveAverage x y z
   where
     avg = (x + y + z) `div` 3
 
+--7
+
+validDate :: Int -> Int -> Bool
+validDate day month
+  | month < 1 || month > 12 = False
+  | month == 2              = day >= 1 && day <= 28
+  | month `elem` [4,6,9,11] = day >= 1 && day <= 30
+  | otherwise               = day >= 1 && day <= 31
+
