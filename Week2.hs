@@ -47,4 +47,11 @@ howManyEqual x y z
   | x == z = 2
   | y == z = 2
   |otherwise = 0
-  
+
+
+--4
+
+sumDiagonalLengths :: Float -> Float -> Float -> Float
+sumDiagonalLengths s1 s2 s3 = diagonal s1 + diagonal s2 + diagonal s3
+  where
+    diagonal s = sqrt (2 * s ^ 2)
