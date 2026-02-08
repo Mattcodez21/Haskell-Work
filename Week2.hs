@@ -29,3 +29,11 @@ absolute :: Int -> Int
 absolute x 
   | x < 0 = -x 
   | otherwise = x 
+
+--2
+
+sign :: Int -> Int
+sign x 
+  | x > 0 = 1
+  | x < 0 = -1
+  | otherwise = 0
