@@ -89,3 +89,15 @@ validDate day month
   | month `elem` [4,6,9,11] = day >= 1 && day <= 30
   | otherwise               = day >= 1 && day <= 31
 
+--8
+
+daysInMonth :: Int -> Int -> Int
+daysInMonth month year
+  | month == 2 && isLeapYear = 29
+  | month == 2               = 28
+  | month `elem` [4,6,9,11]  = 30
+  | otherwise                = 31
+  where
+    isLeapYear = year `mod` 4 == 0
+
+
