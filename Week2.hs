@@ -16,7 +16,7 @@ pizzaCalories :: Int -> String -> Float
 pizzaCalories diameter toppings = (11.5 + toppingCalories) * area
   where
     area = pi * (fromIntegral diameter / 2) ^ 2
-    
+
     toppingCalories
       | toppings == "pepperoni" = 6
       | toppings == "tuna"      = 4
@@ -25,15 +25,15 @@ pizzaCalories diameter toppings = (11.5 + toppingCalories) * area
 
 --1
 
-absolute :: Int -> Int 
-absolute x 
-  | x < 0 = -x 
-  | otherwise = x 
+absolute :: Int -> Int
+absolute x
+  | x < 0 = -x
+  | otherwise = x
 
 --2
 
 sign :: Int -> Int
-sign x 
+sign x
   | x > 0 = 1
   | x < 0 = -1
   | otherwise = 0
@@ -41,7 +41,7 @@ sign x
 --3
 
 howManyEqual :: Int -> Int -> Int -> Int
-howManyEqual x y z 
+howManyEqual x y z
   | x == y && y == z = 3
   | x == y = 2
   | x == z = 2
@@ -100,4 +100,78 @@ daysInMonth month year
   where
     isLeapYear = year `mod` 4 == 0
 
+{- Written Exercises:
+
+-- Evaluate sumThree Expressions
+
+(a) sumThree 3 5 7
+  = 3 + 5 + 7
+  = 8 + 7
+  = 15
+
+(b) sumThree 8 (1 + 3) 2
+  = 8 + (1 + 3) + 2
+  = 8 + 4 + 2
+  = 12 + 2
+  = 14
+
+--Evaluate threeDifferent Expressions
+
+(a) threeDifferent 1 4 2
+  = (1 /= 4) && (4 /= 2) && (1 /= 2)
+  = True && (4 /= 2) && (1 /= 2)
+  = True && True && (1 /= 2)
+  = True && True && True
+  = True && True
+  = True
+
+(b) threeDifferent 1 7 7
+  = (1 /= 7) && (7 /= 7) && (1 /= 7)
+  = True && (7 /= 7) && (1 /= 7)
+  = True && False && (1 /= 7)
+  = False && (1 /= 7)
+  = False
+
+-- Evaluate howManyEqual Expressions
+
+(a) howManyEqual 3 5 2
+  Substitute x=3, y=5, z=2, then check guards:
+  
+  Guard 1: x == y && y == z
+         = 3 == 5 && 5 == 2
+         = False && 5 == 2
+         = False
+  
+  Guard 2: x == y         = 3 == 5
+         = False
+  
+  Guard 3: x == z
+         = 3 == 2
+         = False
+  
+  Guard 4: y == z
+         = 5 == 2
+         = False
+  
+  Guard 5: otherwise
+         = True   
+  
+  Result = 0
+
+(b) howManyEqual 5 2 5
+  Substitute x=5, y=2, z=5, then check guards:
+  
+  Guard 1: x == y && y == z
+         = 5 == 2 && 2 == 5
+         = False && 2 == 5
+         = False
+  
+  Guard 2: x == y
+         = 5 == 2
+         = False
+  
+  Guard 3: x == z
+         = 5 == 5
+         = True
+-}
 
