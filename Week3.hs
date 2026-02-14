@@ -114,3 +114,11 @@ sumFromTo x y
   | x == y    = x
   | otherwise = x + sumFromTo (x + 1) y
 
+--9
+
+gcd :: Int -> Int -> Int
+gcd x y
+  | x == y    = x
+  | x > y     = Prelude.gcd (x - y) y
+  | otherwise = Prelude.gcd x (y - x)
+
