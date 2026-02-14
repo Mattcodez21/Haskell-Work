@@ -93,3 +93,9 @@ daysInMonth _  = 31
 sumNumbers :: Int -> Int
 sumNumbers 0 = 0
 sumNumbers n = n + sumNumbers (n - 1)
+
+--6
+
+sumSquares :: Int -> Int
+sumSquares 0 = 0
+sumSquares n = n^2 + sumSquares (n - 1)
