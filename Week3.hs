@@ -105,3 +105,12 @@ sumSquares n = n^2 + sumSquares (n - 1)
 power :: Int -> Int -> Int
 power _ 0 = 1
 power x n = x * power x (n - 1)
+
+--8
+
+sumFromTo :: Int -> Int -> Int
+sumFromTo x y
+  | y < x     = 0
+  | x == y    = x
+  | otherwise = x + sumFromTo (x + 1) y
+
