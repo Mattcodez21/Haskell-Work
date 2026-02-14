@@ -77,3 +77,13 @@ exOr x y = x /= y
 ifThenElse :: Bool -> Int -> Int -> Int
 ifThenElse True  x _ = x
 ifThenElse False _ y = y
+
+--4
+
+daysInMonth :: Int -> Int
+daysInMonth 2  = 28
+daysInMonth 4  = 30
+daysInMonth 6  = 30
+daysInMonth 9  = 30
+daysInMonth 11 = 30
+daysInMonth _  = 31
