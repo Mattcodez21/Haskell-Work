@@ -99,3 +99,9 @@ sumNumbers n = n + sumNumbers (n - 1)
 sumSquares :: Int -> Int
 sumSquares 0 = 0
 sumSquares n = n^2 + sumSquares (n - 1)
+
+--7
+
+power :: Int -> Int -> Int
+power _ 0 = 1
+power x n = x * power x (n - 1)
