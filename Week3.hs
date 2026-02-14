@@ -122,3 +122,13 @@ gcd x y
   | x > y     = Prelude.gcd (x - y) y
   | otherwise = Prelude.gcd x (y - x)
 
+--10
+
+intSquareRoot :: Int -> Int
+intSquareRoot n = findRoot n n
+
+findRoot :: Int -> Int -> Int
+findRoot n s
+  | s * s <= n = s
+  | otherwise  = findRoot n (s - 1)
+
