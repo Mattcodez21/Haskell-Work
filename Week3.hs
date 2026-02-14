@@ -71,3 +71,9 @@ True  && True  = True
 
 exOr :: Bool -> Bool -> Bool
 exOr x y = x /= y 
+
+--3
+
+ifThenElse :: Bool -> Int -> Int -> Int
+ifThenElse True  x _ = x
+ifThenElse False _ y = y
