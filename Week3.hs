@@ -66,3 +66,8 @@ False && False = False
 False && True  = False
 True  && False = False
 True  && True  = True
+
+--2
+
+exOr :: Bool -> Bool -> Bool
+exOr x y = x /= y 
