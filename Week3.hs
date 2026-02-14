@@ -87,3 +87,9 @@ daysInMonth 6  = 30
 daysInMonth 9  = 30
 daysInMonth 11 = 30
 daysInMonth _  = 31
+
+--5
+
+sumNumbers :: Int -> Int
+sumNumbers 0 = 0
+sumNumbers n = n + sumNumbers (n - 1)
