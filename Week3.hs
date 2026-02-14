@@ -1,4 +1,4 @@
-{--- We don't import '||' from the prelude, so that we can
+-- We don't import '||' from the prelude, so that we can
 -- define our own version
 
 import Prelude hiding ((||))
@@ -42,6 +42,21 @@ mult n m
 divide :: Int -> Int -> Int
 divide n m
   | n < m = 0
-  | otherwise = 1 + divide (n - m) m -}
+  | otherwise = 1 + divide (n - m) m 
+
+
+--Worked Example 1:
+
+nor :: Bool -> Bool -> Bool
+nor False x = not x
+nor True _  = False
+
+--Worked Example 2:
+
+fibonacci :: Int -> Int
+fibonacci 0 = 0
+fibonacci 1 = 1
+fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)
+
 
 
