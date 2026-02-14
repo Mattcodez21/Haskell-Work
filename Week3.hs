@@ -59,4 +59,10 @@ fibonacci 1 = 1
 fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)
 
 
+--1
 
+(&&) :: Bool -> Bool -> Bool
+False && False = False
+False && True  = False
+True  && False = False
+True  && True  = True
