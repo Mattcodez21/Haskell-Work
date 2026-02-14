@@ -132,3 +132,24 @@ findRoot n s
   | s * s <= n = s
   | otherwise  = findRoot n (s - 1)
 
+--11
+
+-- ALTERNATIVE 1: sumNumbers with guards instead of pattern matching
+-- sumNumbers :: Int -> Int
+-- sumNumbers n
+--    | n == 0    = 0
+--    | otherwise = n + sumNumbers (n - 1)
+
+-- ----- ALTERNATIVE 2: power with guards instead of pattern matching -----
+-- power :: Int -> Int -> Int
+-- power x n
+--   | n == 0    = 1
+--   | otherwise = x * power x (n - 1)
+
+-- ----- ALTERNATIVE 3: gcd with pattern matching instead of guards -----
+-- gcd :: Int -> Int -> Int
+-- gcd x y
+--   | x == y    = x
+--   | x > y     = gcd (x - y) y
+--   | otherwise = gcd x (y - x)
+
