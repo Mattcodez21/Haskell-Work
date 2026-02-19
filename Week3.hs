@@ -68,12 +68,12 @@ False && True  = False
 True  && False = False
 True  && True  = True
 
--- Alternative version 1 (comment out above, uncomment below to test):
+-- Alternative version 1:
 --(&&) :: Bool -> Bool -> Bool
 --True && True = True
 --_    && _    = False
 
--- Alternative version 2 (comment out above, uncomment below to test):
+-- Alternative version 2:
 --(&&) :: Bool -> Bool -> Bool
 --False && _ = False
 --True  && x = x
