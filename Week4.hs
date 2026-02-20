@@ -72,3 +72,14 @@ averageMark stmks = fromIntegral sumMarks / fromIntegral numberOfStudents
 
 sumDifference :: Int -> Int -> (Int, Int)
 sumDifference x y = (x + y, x - y)
+
+--Q2: Grade a Student:
+
+grade :: StudentMark -> Char
+grade (name, mark)
+  | mark < 0 || mark > 100 = error "Mark must be between 0 and 100"
+  | mark >= 70             = 'A'
+  | mark >= 60             = 'B'
+  | mark >= 50             = 'C'
+  | mark >= 40             = 'D'
+  | otherwise              = 'F'
