@@ -121,3 +121,15 @@ capMarks stmks = [capMark stmk | stmk <- stmks]
 
 gradeStudents :: [StudentMark] -> [(String, Char)]
 gradeStudents stmks = [(name, grade (name, mark)) | (name, mark) <- stmks]
+
+--Q10: Duplicate String:
+
+-- Version 1: Using list comprehension (recommended)
+duplicate :: String -> Int -> String
+duplicate str n = concat [str | _ <- [1 .. n]]
+
+-- Version 2: Recursive (commented out)
+-- duplicate :: String -> Int -> String
+-- duplicate str n
+--   | n <= 0    = ""
+--   | otherwise = str ++ duplicate str (n - 1)
