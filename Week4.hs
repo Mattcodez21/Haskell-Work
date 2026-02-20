@@ -116,3 +116,8 @@ onlyDigits str = [c | c <- str, isDigit c]
 
 capMarks :: [StudentMark] -> [StudentMark]
 capMarks stmks = [capMark stmk | stmk <- stmks]
+
+--Q9: Grade Students(for a list):
+
+gradeStudents :: [StudentMark] -> [(String, Char)]
+gradeStudents stmks = [(name, grade (name, mark)) | (name, mark) <- stmks]
