@@ -133,3 +133,10 @@ duplicate str n = concat [str | _ <- [1 .. n]]
 -- duplicate str n
 --   | n <= 0    = ""
 --   | otherwise = str ++ duplicate str (n - 1)
+
+--Q11: Divisors:
+
+divisors :: Int -> [Int]
+divisors n
+  | n <= 0    = []
+  | otherwise = [i | i <- [1 .. n], n `mod` i == 0]
