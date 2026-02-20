@@ -106,3 +106,8 @@ firstSquares n = [i^2 | i <- [1 .. n]]
 
 capitalise :: String -> String
 capitalise str = [toUpper c | c <- str]
+
+--Q7: Only Digits:
+
+onlyDigits :: String -> String
+onlyDigits str = [c | c <- str, isDigit c]
