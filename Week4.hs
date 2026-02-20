@@ -111,3 +111,8 @@ capitalise str = [toUpper c | c <- str]
 
 onlyDigits :: String -> String
 onlyDigits str = [c | c <- str, isDigit c]
+
+--Q8: Cap Marks(for a list):
+
+capMarks :: [StudentMark] -> [StudentMark]
+capMarks stmks = [capMark stmk | stmk <- stmks]
