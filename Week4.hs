@@ -101,3 +101,8 @@ firstNumbers n = [1 .. n]
 
 firstSquares :: Int -> [Int]
 firstSquares n = [i^2 | i <- [1 .. n]]
+
+--Q6: Capitalise String:
+
+capitalise :: String -> String
+capitalise str = [toUpper c | c <- str]
