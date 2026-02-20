@@ -83,3 +83,11 @@ grade (name, mark)
   | mark >= 50             = 'C'
   | mark >= 40             = 'D'
   | otherwise              = 'F'
+
+--Q3: Cap Mark at 40%:
+
+capMark :: StudentMark -> StudentMark
+capMark (name, mark)
+  | mark < 0 || mark > 100 = error "Mark must be between 0 and 100"
+  | mark > 40              = (name, 40)  -- Cap at 40
+  | otherwise              = (name, mark)  -- Keep original
