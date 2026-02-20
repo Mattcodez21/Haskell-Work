@@ -96,3 +96,8 @@ capMark (name, mark)
 
 firstNumbers :: Int -> [Int]
 firstNumbers n = [1 .. n]
+
+--Q5: First Squares:
+
+firstSquares :: Int -> [Int]
+firstSquares n = [i^2 | i <- [1 .. n]]
