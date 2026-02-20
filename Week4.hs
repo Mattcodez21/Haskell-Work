@@ -67,3 +67,8 @@ averageMark stmks = fromIntegral sumMarks / fromIntegral numberOfStudents
 -- Each element of stmks is a pair (name, mark)
 -- We unpack it into (_, mk) - ignore name, capture mark
 -- Results in list of just the marks: [56, 73]
+
+--Q1: Sum-Difference:
+
+sumDifference :: Int -> Int -> (Int, Int)
+sumDifference x y = (x + y, x - y)
