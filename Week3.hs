@@ -161,15 +161,9 @@ findRoot n s
 
 
 -- Exercise 11: Alternative implementations
--- The task: If many answers use guards, write versions with pattern matching (or vice versa)
--- Show THREE alternative implementations
 
 -- ALTERNATIVE 1: sumNumbers
--- Original version (pattern matching) - see Exercise 5 above:
--- sumNumbers 0 = 0
--- sumNumbers n = n + sumNumbers (n - 1)
 
--- Alternative with guards:
 --sumNumbers :: Int -> Int
 --sumNumbers n
 --  | n == 0    = 0
@@ -177,11 +171,7 @@ findRoot n s
 
 
 -- ALTERNATIVE 2: power  
--- Original version (pattern matching) - see Exercise 7 above:
--- power _ 0 = 1
--- power x n = x * power x (n - 1)
 
--- Alternative with guards:
 --power :: Int -> Int -> Int
 --power x n
 --  | n == 0    = 1
@@ -189,14 +179,6 @@ findRoot n s
 
 
 -- ALTERNATIVE 3: sumFromTo
--- Original version (guards) - see Exercise 8 above:
--- sumFromTo x y
---   | y < x     = 0
---   | x == y    = x
---   | otherwise = x + sumFromTo (x + 1) y
 
--- Alternative with pattern matching (harder for this one):
 --sumFromTo :: Int -> Int -> Int
 --sumFromTo x y = if y < x then 0 else if x == y then x else x + sumFromTo (x + 1) y
--- Note: Pattern matching doesn't work well here since we need to compare values
--- This shows that guards are the better choice for this problem!
