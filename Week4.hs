@@ -140,3 +140,8 @@ divisors :: Int -> [Int]
 divisors n
   | n <= 0    = []
   | otherwise = [i | i <- [1 .. n], n `mod` i == 0]
+
+--Q12: Is Prime?:
+
+isPrime :: Int -> Bool
+isPrime n = divisors n == [1, n]
