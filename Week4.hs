@@ -124,11 +124,10 @@ gradeStudents stmks = [(name, grade (name, mark)) | (name, mark) <- stmks]
 
 --Q10: Duplicate String:
 
--- Version 1: Using list comprehension (recommended)
 duplicate :: String -> Int -> String
 duplicate str n = concat [str | _ <- [1 .. n]]
 
--- Version 2: Recursive (commented out)
+-- Alternative:
 -- duplicate :: String -> Int -> String
 -- duplicate str n
 --   | n <= 0    = ""
@@ -145,3 +144,13 @@ divisors n
 
 isPrime :: Int -> Bool
 isPrime n = divisors n == [1, n]
+
+--Q13: Split:
+
+split :: [(a, b)] -> ([a], [b])
+split pairs = ([fst p | p <- pairs], [snd p | p <- pairs])
+
+--Alternative:
+
+-- split :: [(a, b)] -> ([a], [b])
+-- split pairs = ([x | (x, _) <- pairs], [y | (_, y) <- pairs])
